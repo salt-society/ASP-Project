@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin Pages\Content Pages\ViewStock.aspx" />
+    <Content Include="Admin Pages\Content Pages\EditStock.aspx" />
+    <Content Include="Admin Pages\Content Pages\AddProduct.aspx" />
     <Content Include="App_Data\GMBDatabase.mdf" />
     <Content Include="App_Data\GMBDatabase_log.ldf">
       <DependentUpon>GMBDatabase.mdf</DependentUpon>
@@ -75,6 +77,11 @@
     <Content Include="Base Pages\Login.aspx" />
     <Content Include="Base Pages\Register.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="User Pages\Content Pages\Profile.aspx" />
+    <Content Include="User Pages\Content Pages\EditProfile.aspx" />
+    <Content Include="User Pages\Content Pages\ViewProducts.aspx" />
+    <Content Include="User Pages\Content Pages\ViewTransactions.aspx" />
+    <Content Include="User Pages\Content Pages\UserCart.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +91,20 @@
     </Compile>
     <Compile Include="Admin Pages\Content Pages\ViewStock.aspx.designer.cs">
       <DependentUpon>ViewStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Pages\Content Pages\EditStock.aspx.cs">
+      <DependentUpon>EditStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\Content Pages\EditStock.aspx.designer.cs">
+      <DependentUpon>EditStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Pages\Content Pages\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\Content Pages\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Base Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -110,10 +131,53 @@
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Pages\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Pages\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\ViewProducts.aspx.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\ViewProducts.aspx.designer.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\ViewTransactions.aspx.cs">
+      <DependentUpon>ViewTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\ViewTransactions.aspx.designer.cs">
+      <DependentUpon>ViewTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\UserCart.aspx.cs">
+      <DependentUpon>UserCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Pages\Content Pages\UserCart.aspx.designer.cs">
+      <DependentUpon>UserCart.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin Pages\Admin.Master" />
     <None Include="packages.config" />
+    <Content Include="User Pages\User.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

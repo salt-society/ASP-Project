@@ -12,9 +12,9 @@
             <h3>REGISTRATION</h3>
             <div style="width: 40%; margin-left: 30%">
                 <p>
-                    USERNAME:
+                    EMAIL
                     <br />
-                    <asp:TextBox runat="server" ID="userBox" required placeholder="Insert your username here" style="width:75%"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="userBox" required placeholder="Insert your email here" type="email" style="width:75%"></asp:TextBox>
                     <br />
                     <br />
                     PASSWORD:

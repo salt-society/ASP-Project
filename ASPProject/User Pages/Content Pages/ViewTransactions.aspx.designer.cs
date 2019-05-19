@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASPProject.Admin_Pages {
+namespace ASPProject.User_Pages {
     
     
-    public partial class WebForm1 {
+    public partial class WebForm4 {
         
         /// <summary>
-        /// StockGrid control.
+        /// userTransactions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView StockGrid;
+        protected global::System.Web.UI.WebControls.GridView userTransactions;
         
         /// <summary>
         /// GMBDataSource control.

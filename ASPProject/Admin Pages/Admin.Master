@@ -13,12 +13,11 @@
                 <div style="height: 10%; font-family:Verdana; color:deepskyblue; font-size: 20px">
                     [ADMIN] 
                     <span style="color: white; font-size: 16px">
-                        <asp:HyperLink runat="server" ID="ViewStockLink" NavigateUrl="">View Stock</asp:HyperLink>&nbsp| 
-                        <asp:HyperLink runat="server" ID="EditStockLink" NavigateUrl="">Edit Stock</asp:HyperLink>&nbsp|
-                        <asp:HyperLink runat="server" ID="AddProductLink" NavigateUrl="">Add Product</asp:HyperLink>
+                        <asp:HyperLink runat="server" ID="ViewStockLink" NavigateUrl="~/Admin Pages/Content Pages/ViewStock.aspx" ForeColor="White">View Stock</asp:HyperLink>&nbsp| 
+                        <asp:HyperLink runat="server" ID="EditStockLink" NavigateUrl="~/Admin Pages/Content Pages/EditStock.aspx" ForeColor="White">Edit Stock</asp:HyperLink>&nbsp|
+                        <asp:HyperLink runat="server" ID="AddProductLink" NavigateUrl="~/Admin Pages/Content Pages/AddProduct.aspx" ForeColor="White">Add Product</asp:HyperLink>
                     </span>
-
-                    <span style="margin-left:85%">
+                    <span style="margin-left:60%;">
                         <asp:Button runat="server" ID="LogoutButton" Text="Logout" BackColor="Black" BorderStyle="None" ForeColor="White"/>
                     </span>
                 </div>
