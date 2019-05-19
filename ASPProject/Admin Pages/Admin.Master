@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ASPProject.Master_Sites.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin</title>
+</head>
+<body style="color: #FFFFFF; background-color: #000000">
+    <form id="Main" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="Header" runat="server">
+                <div style="height: 10%; font-family:Verdana; color:deepskyblue; font-size: 20px">
+                    [ADMIN] 
+                    <span style="color: white; font-size: 16px">
+                        <asp:HyperLink runat="server" ID="ViewStockLink" NavigateUrl="">View Stock</asp:HyperLink>&nbsp| 
+                        <asp:HyperLink runat="server" ID="EditStockLink" NavigateUrl="">Edit Stock</asp:HyperLink>&nbsp|
+                        <asp:HyperLink runat="server" ID="AddProductLink" NavigateUrl="">Add Product</asp:HyperLink>
+                    </span>
+
+                    <span style="margin-left:85%">
+                        <asp:Button runat="server" ID="LogoutButton" Text="Logout" BackColor="Black" BorderStyle="None" ForeColor="White"/>
+                    </span>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:ContentPlaceHolder ID="Body" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

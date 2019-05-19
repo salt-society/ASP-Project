@@ -4,14 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Grandmaster's Bazaar</title>
 </head>
 <body style="color: #FFFFFF; background-color: #000000">
     <form id="login" runat="server">
         <div style="text-align: center">
             <h1>GRANDMASTER'S BAZAAR</h1>
-            <br />
-            <h3>LOGIN</h3>
             <br />
             <p>
                 USERNAME
@@ -23,7 +21,6 @@
                 <br />
                 <asp:TextBox runat="server" ID="passBox" required type="password" placeholder="Insert password here"></asp:TextBox>
             </p>
-            <br />
             <br />
             <asp:Button runat="server" ID="loginButton" text="LOGIN"/>
         </div>
