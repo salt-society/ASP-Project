@@ -17,8 +17,8 @@
                         <asp:HyperLink runat="server" ID="EditStockLink" NavigateUrl="~/Admin Pages/Content Pages/EditStock.aspx" ForeColor="White">Edit Stock</asp:HyperLink>&nbsp|
                         <asp:HyperLink runat="server" ID="AddProductLink" NavigateUrl="~/Admin Pages/Content Pages/AddProduct.aspx" ForeColor="White">Add Product</asp:HyperLink>
                     </span>
-                    <span style="margin-left:60%;">
-                        <asp:Button runat="server" ID="LogoutButton" Text="Logout" BackColor="Black" BorderStyle="None" ForeColor="White"/>
+                    <span style="margin-left:55%;">
+                        <asp:Button runat="server" ID="LogoutButton" Text="Logout" BackColor="Black" BorderStyle="None" ForeColor="White" OnClick="SafeLogout"/>
                     </span>
                 </div>
             </asp:ContentPlaceHolder>

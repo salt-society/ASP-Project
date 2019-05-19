@@ -40,6 +40,15 @@ namespace ASPProject.Base_Sites {
         protected global::System.Web.UI.WebControls.TextBox passBox;
         
         /// <summary>
+        /// confirmBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox confirmBox;
+        
+        /// <summary>
         /// fnameBox control.
         /// </summary>
         /// <remarks>

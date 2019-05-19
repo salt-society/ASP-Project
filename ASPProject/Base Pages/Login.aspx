@@ -14,21 +14,21 @@
             <p>
                 USERNAME
                 <br />
-                <asp:TextBox runat="server" ID="userBox" required placeholder="Insert username here"></asp:TextBox>
+                <asp:TextBox runat="server" ID="userBox" required placeholder="Insert username here" style="width: 30%"></asp:TextBox>
                 <br />
                 <br />
                 PASSWORD
                 <br />
-                <asp:TextBox runat="server" ID="passBox" required type="password" placeholder="Insert password here"></asp:TextBox>
+                <asp:TextBox runat="server" ID="passBox" required type="password" placeholder="Insert password here" style="width:30%"></asp:TextBox>
             </p>
             <br />
-            <asp:Button runat="server" ID="loginButton" text="LOGIN"/>
+            <asp:Button runat="server" ID="loginButton" text="LOGIN" OnClick="GetDetails"/>
         </div>
     </form>
 
     <div style="text-align: center">
         <p>
-            Need an account? <asp:HyperLink runat="server" ID="registerLink" NavigateUrl="~/Base Sites/Register.aspx" ForeColor="White">Click Here!</asp:HyperLink>
+            Need an account? <asp:HyperLink runat="server" ID="registerLink" NavigateUrl="~/Base Pages/Register.aspx" ForeColor="White">Click Here!</asp:HyperLink>
         </p>
     </div>
 </body>

@@ -11,7 +11,14 @@ namespace ASPProject.Admin_Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["currentUserType"] != null)
+            {
+                if (Session["currentUserType"].ToString() != "admin")
+                    Response.Redirect("~/Base Pages/Login.aspx");
+            }
 
+            else
+                Response.Redirect("~/Base Pages/Login.aspx");
         }
     }
 }

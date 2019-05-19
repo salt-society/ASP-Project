@@ -11,7 +11,17 @@ namespace ASPProject.Master_Sites
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["currentUserType"].ToString() != "admin")
+                Response.Redirect("~/Base Sites/Login.aspx");
+        }
 
+        public void SafeLogout(object sender, EventArgs e)
+        {
+            // Empty Session Variables Here
+            Session["currentUser"] = null;
+            Session["currentUserType"] = null;
+
+            Response.Redirect("~/Base Pages/Login.aspx");
         }
     }
 }

@@ -23,7 +23,7 @@
         <br />
         Image
         <br />
-        <asp:Button runat="server" ID="uploadButton" text="Upload File" />
+        <asp:FileUpload runat="server" ID="uploadBox" />
         <br />
         <br />
         <asp:Button runat="server" ID="addButton" text="ADD PRODUCT" />
