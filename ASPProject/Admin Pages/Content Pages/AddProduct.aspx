@@ -26,6 +26,6 @@
         <asp:FileUpload runat="server" ID="uploadBox" />
         <br />
         <br />
-        <asp:Button runat="server" ID="addButton" text="ADD PRODUCT" />
+        <asp:Button runat="server" ID="addButton" text="ADD PRODUCT" OnClick="GetDetails" />
     </div>
 </asp:Content>

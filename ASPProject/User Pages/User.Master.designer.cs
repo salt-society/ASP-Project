@@ -13,13 +13,13 @@ namespace ASPProject.User_Pages {
     public partial class User {
         
         /// <summary>
-        /// form1 control.
+        /// Main control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Main;
         
         /// <summary>
         /// Header control.
@@ -83,6 +83,15 @@ namespace ASPProject.User_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button LogoutButton;
+        
+        /// <summary>
+        /// Sub control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm Sub;
         
         /// <summary>
         /// Body control.

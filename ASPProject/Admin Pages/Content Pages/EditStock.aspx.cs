@@ -25,6 +25,7 @@ namespace ASPProject.Admin_Pages
                 Response.Redirect("~/Base Pages/Login.aspx");
 
             helper = new DataHelper();
+            ResetValue();
         }
 
         // Change the number to be added or reduced from the stock
@@ -94,11 +95,25 @@ namespace ASPProject.Admin_Pages
         public void ResetValue(object sender, EventArgs e)
         {
             editLabel.Text = "0";
+
+            // Set Stock Count
+            DataSet dataset = helper.PRODUCT_GetProductDetails(ProductListBox.SelectedValue);
+
+            int count = Convert.ToInt32(dataset.Tables[0].Rows[0][2]);
+
+            stockCountLabel.Text = count.ToString();
         }
 
         private void ResetValue()
         {
             editLabel.Text = "0";
+
+            // Set Stock Count
+            DataSet dataset = helper.PRODUCT_GetProductDetails(ProductListBox.SelectedValue);
+
+            int count = Convert.ToInt32(dataset.Tables[0].Rows[0][2]);
+
+            stockCountLabel.Text = count.ToString();
         }
     }
 }

@@ -55,9 +55,9 @@ namespace ASPProject.Admin_Pages
                 Response.Redirect("~/Admin Pages/Content Pages/ViewStock.aspx");
             }
 
-            catch(Exception)
+            catch
             {
-                Console.WriteLine("Something went wrong... Try again!");
+                Console.WriteLine("Something went wrong... try again!");
                 return;
             }
         }

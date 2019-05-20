@@ -23,9 +23,11 @@
                 </div>
             </asp:ContentPlaceHolder>
         </div>
+    </form>
+    <form id="BodyForm" runat="server">
         <asp:ContentPlaceHolder ID="Body" runat="server">
-
         </asp:ContentPlaceHolder>
     </form>
+    
 </body>
 </html>

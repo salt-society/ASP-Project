@@ -7,7 +7,7 @@
     <title>User</title>
 </head>
 <body style="color: #FFFFFF; background-color: #000000">
-    <form id="form1" runat="server">
+    <form id="Main" runat="server">
         <div style="height: 10%; font-family:Verdana; color:deepskyblue; font-size: 20px">
             <asp:ContentPlaceHolder ID="Header" runat="server">
                 [USER] 
@@ -20,12 +20,13 @@
                 <span style="margin-left:33%; color:white; font-size:16px">
                     <asp:Label runat="server" ID="userLabel" Text="Welcome, user!"></asp:Label> &nbsp| 
                     <asp:HyperLink runat="server" ID="ViewCartLink" NavigateUrl="~/User Pages/Content Pages/UserCart.aspx" ForeColor="White">View Cart</asp:HyperLink>&nbsp| 
-                    <asp:Button runat="server" ID="LogoutButton" Text="Logout" BackColor="Black" BorderStyle="None" ForeColor="White"/>
+                    <asp:Button runat="server" ID="LogoutButton" Text="Logout" BackColor="Black" BorderStyle="None" ForeColor="White" OnClick="SafeLogout"/>
                 </span>
             </asp:ContentPlaceHolder>
         </div>
+    </form>
+    <form id="Sub" runat="server">
         <asp:ContentPlaceHolder ID="Body" runat="server">
-
         </asp:ContentPlaceHolder>
     </form>
 </body>

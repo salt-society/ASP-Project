@@ -65,13 +65,41 @@ namespace DataLibrary
             myConn.Close();
         }
 
+        // Edit user details
+        public void USER_EditUserDetails(string user_id, string password, string fname, string lname)
+        {
+            myConn.Open();
+            SqlCommand USER_EditUserDetails = new SqlCommand("USER_EditUserDetails", myConn);
+            USER_EditUserDetails.CommandType = System.Data.CommandType.StoredProcedure;
+            USER_EditUserDetails.Parameters.Add("@user_id", SqlDbType.NVarChar).Value = user_id;
+            USER_EditUserDetails.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
+            USER_EditUserDetails.Parameters.Add("@fname", SqlDbType.NVarChar).Value = fname;
+            USER_EditUserDetails.Parameters.Add("@lname", SqlDbType.NVarChar).Value = lname;
+            USER_EditUserDetails.ExecuteNonQuery();
+            myConn.Close();
+        }
+
+        // Get a user's details
+        public DataSet USER_GetUserData(string user_id)
+        {
+            DataSet dataset = new DataSet();
+
+            SqlDataAdapter USER_GetUserData = new SqlDataAdapter("USER_GetUserData", myConn);
+            USER_GetUserData.SelectCommand.CommandType = CommandType.StoredProcedure;
+            USER_GetUserData.SelectCommand.Parameters.Add(@user_id, SqlDbType.NVarChar).Value = user_id;
+
+            USER_GetUserData.Fill(dataset);
+
+            return dataset;
+        }
+
         // Get a product's details
         public DataSet PRODUCT_GetProductDetails(string product_name)
         {
             DataSet dataSet = new DataSet();
 
             SqlDataAdapter PRODUCT_GetProductDetails = new SqlDataAdapter("PRODUCT_GetProductDetails", myConn);
-            PRODUCT_GetProductDetails.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            PRODUCT_GetProductDetails.SelectCommand.CommandType = CommandType.StoredProcedure;
             PRODUCT_GetProductDetails.SelectCommand.Parameters.Add("@product_name", SqlDbType.NVarChar).Value = product_name;
 
             PRODUCT_GetProductDetails.Fill(dataSet);
@@ -80,11 +108,12 @@ namespace DataLibrary
         }
 
         // Edit a product's stock
-        public void PRODUCT_EditStock(string selectedProduct, int stock)
+        public void PRODUCT_EditStock(string product_name, int stock)
         {
             myConn.Open();
             SqlCommand PRODUCT_EditStock = new SqlCommand("PRODUCT_EditStock", myConn);
-            PRODUCT_EditStock.Parameters.Add("@product_name", SqlDbType.NVarChar).Value = selectedProduct;
+            PRODUCT_EditStock.CommandType = CommandType.StoredProcedure;
+            PRODUCT_EditStock.Parameters.Add("@product_name", SqlDbType.NVarChar).Value = product_name;
             PRODUCT_EditStock.Parameters.Add("@stock", SqlDbType.Int).Value = stock;
             PRODUCT_EditStock.ExecuteNonQuery();
             myConn.Close();
@@ -95,6 +124,7 @@ namespace DataLibrary
         {
             myConn.Open();
             SqlCommand PRODUCT_CreateNewProduct = new SqlCommand("PRODUCT_CreateNewProduct", myConn);
+            PRODUCT_CreateNewProduct.CommandType = CommandType.StoredProcedure;
             PRODUCT_CreateNewProduct.Parameters.Add("@product_name", SqlDbType.NVarChar).Value = product_name;
             PRODUCT_CreateNewProduct.Parameters.Add("@stock", SqlDbType.Int).Value = stock;
             PRODUCT_CreateNewProduct.Parameters.Add("@price", SqlDbType.Int).Value = price;
