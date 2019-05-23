@@ -10,7 +10,7 @@
 namespace ASPProject.User_Pages {
     
     
-    public partial class WebForm1 {
+    public partial class WebForm6 {
         
         /// <summary>
         /// emailLabel control.

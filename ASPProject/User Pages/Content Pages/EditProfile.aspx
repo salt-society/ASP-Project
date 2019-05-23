@@ -1,14 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User Pages/User.Master" AutoEventWireup="true" CodeBehind="EditProfile.aspx.cs" Inherits="ASPProject.User_Pages.WebForm2" %>
-<asp:Content ID="Edit_Profile" ContentPlaceHolderID="Body" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User Pages/User.Master" AutoEventWireup="true" CodeBehind="EditProfile.aspx.cs" Inherits="ASPProject.User_Pages.WebForm8" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <div style="margin-left:25%; margin-top:10%; width:50%; text-align:center">
         PASSWORD
         <br />
-        <asp:TextBox runat="server" ID="passBox" required placeholder="Edit Your Password"></asp:TextBox>
+        <asp:TextBox runat="server" ID="passBox" required type="password" placeholder="Edit Your Password"></asp:TextBox>
         <br />
         <br />
         CONFIRM PASSWORD
         <br />
-        <asp:TextBox runat="server" ID="confirmBox" required placeholder="Confirm the password edit"></asp:TextBox>
+        <asp:TextBox runat="server" ID="confirmBox" required type="password" placeholder="Confirm the password edit"></asp:TextBox>
         <br />
         <br />
         FIRST NAME

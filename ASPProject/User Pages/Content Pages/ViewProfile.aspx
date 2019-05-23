@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User Pages/User.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="ASPProject.User_Pages.WebForm1" %>
-<asp:Content ID="Profile" ContentPlaceHolderID="Body" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User Pages/User.Master" AutoEventWireup="true" CodeBehind="ViewProfile.aspx.cs" Inherits="ASPProject.User_Pages.WebForm6" %>
+<asp:Content ID="ViewProfile" ContentPlaceHolderID="Body" runat="server">
     <div style="margin-left:25%; margin-top:10%; width:50%; height:50%; text-align:center">
         EMAIL
         <br />

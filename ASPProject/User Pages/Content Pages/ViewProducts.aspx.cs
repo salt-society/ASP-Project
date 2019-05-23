@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace ASPProject.User_Pages
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class WebForm7 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

@@ -10,7 +10,7 @@
 namespace ASPProject.User_Pages {
     
     
-    public partial class WebForm2 {
+    public partial class WebForm8 {
         
         /// <summary>
         /// passBox control.

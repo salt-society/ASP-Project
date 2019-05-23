@@ -1,48 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DataLibrary;
 
 namespace ASPProject.User_Pages
 {
-    public partial class User : System.Web.UI.MasterPage
+    public partial class NewUser : System.Web.UI.MasterPage
     {
-        DataHelper helper;
-
-        private DataSet userDetails;
-        private string currentUser;
-    
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["currentUser"] != null && Session["currentUserType"] != null)
+            if (Session["currentUser"] != null && Session["currentUserType"] != null)
             {
-                if(Session["currentUserType"].ToString() != "user")
-                {
-                    Response.Redirect("~/Base Pages/Login.aspx");
-                }
+                if (Session["currentUserType"].ToString() != "admin")
+                    userLabel.Text = "Welcome, " + Session["currentUser"];
 
                 else
-                {
-                    helper = new DataHelper();
-
-                    currentUser = Session["currentUser"].ToString();
-
-                    userDetails = helper.USER_GetUserData(currentUser);
-
-                    userLabel.Text = "Welcome, " + userDetails.Tables[0].Rows[0][2];
-                }
+                    Response.Redirect("~/Base Pages/Login.aspx");
             }
+
+            else
+                Response.Redirect("~/Base Pages/Login.aspx");
         }
 
-        // For a safe logout
+        // Safe Logout
         public void SafeLogout(object sender, EventArgs e)
         {
             Session["currentUser"] = null;
             Session["currentUserType"] = null;
+            Response.Redirect("~/Base Pages/Login.aspx");
         }
     }
 }

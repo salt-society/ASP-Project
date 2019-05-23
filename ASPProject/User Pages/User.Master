@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="ASPProject.User_Pages.User" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.Master.cs" Inherits="ASPProject.User_Pages.NewUser" %>
 
 <!DOCTYPE html>
 
@@ -12,22 +12,21 @@
             <asp:ContentPlaceHolder ID="Header" runat="server">
                 [USER] 
                 <span style="color: white; font-size: 16px">
-                    <asp:HyperLink runat="server" ID="Profile" NavigateUrl="~/User Pages/Content Pages/Profile.aspx" ForeColor="White">Profile</asp:HyperLink>&nbsp| 
+                    <asp:HyperLink runat="server" ID="ViewProfile" NavigateUrl="~/User Pages/Content Pages/ViewProfile.aspx" ForeColor="White">Profile</asp:HyperLink>&nbsp| 
                     <asp:HyperLink runat="server" ID="ViewProducts" NavigateUrl="~/User Pages/Content Pages/ViewProducts.aspx" ForeColor="White">View Products</asp:HyperLink>&nbsp|
                     <asp:HyperLink runat="server" ID="ViewTransactions" NavigateUrl="~/User Pages/Content Pages/ViewTransactions.aspx" ForeColor="White">View My Transactions</asp:HyperLink>
                 </span>
 
                 <span style="margin-left:33%; color:white; font-size:16px">
                     <asp:Label runat="server" ID="userLabel" Text="Welcome, user!"></asp:Label> &nbsp| 
-                    <asp:HyperLink runat="server" ID="ViewCartLink" NavigateUrl="~/User Pages/Content Pages/UserCart.aspx" ForeColor="White">View Cart</asp:HyperLink>&nbsp| 
+                    <asp:HyperLink runat="server" ID="ViewCartLink" NavigateUrl="~/User Pages/Content Pages/ViewCart.aspx" ForeColor="White">View Cart</asp:HyperLink>&nbsp| 
                     <asp:Button runat="server" ID="LogoutButton" Text="Logout" BackColor="Black" BorderStyle="None" ForeColor="White" OnClick="SafeLogout"/>
                 </span>
             </asp:ContentPlaceHolder>
         </div>
-    </form>
-    <form id="Sub" runat="server">
         <asp:ContentPlaceHolder ID="Body" runat="server">
         </asp:ContentPlaceHolder>
     </form>
+        
 </body>
 </html>

@@ -1,15 +1,15 @@
-﻿using System;
+﻿using DataLibrary;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DataLibrary;
 
 namespace ASPProject.User_Pages
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class WebForm8 : System.Web.UI.Page
     {
         DataHelper helper;
 
@@ -50,7 +50,7 @@ namespace ASPProject.User_Pages
             string lname = lnameBox.Text;
 
             // Preliminary Checking
-            if(password != confirm)
+            if (password != confirm)
             {
                 Console.WriteLine("Passwords do not match!");
                 return;

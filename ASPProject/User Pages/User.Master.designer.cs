@@ -10,7 +10,7 @@
 namespace ASPProject.User_Pages {
     
     
-    public partial class User {
+    public partial class NewUser {
         
         /// <summary>
         /// Main control.
@@ -31,13 +31,13 @@ namespace ASPProject.User_Pages {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Header;
         
         /// <summary>
-        /// Profile control.
+        /// ViewProfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink Profile;
+        protected global::System.Web.UI.WebControls.HyperLink ViewProfile;
         
         /// <summary>
         /// ViewProducts control.
@@ -83,15 +83,6 @@ namespace ASPProject.User_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button LogoutButton;
-        
-        /// <summary>
-        /// Sub control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm Sub;
         
         /// <summary>
         /// Body control.

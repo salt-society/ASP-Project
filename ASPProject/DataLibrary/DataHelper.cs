@@ -82,15 +82,15 @@ namespace DataLibrary
         // Get a user's details
         public DataSet USER_GetUserData(string user_id)
         {
-            DataSet dataset = new DataSet();
+            DataSet dataSet = new DataSet();
 
             SqlDataAdapter USER_GetUserData = new SqlDataAdapter("USER_GetUserData", myConn);
-            USER_GetUserData.SelectCommand.CommandType = CommandType.StoredProcedure;
-            USER_GetUserData.SelectCommand.Parameters.Add(@user_id, SqlDbType.NVarChar).Value = user_id;
+            USER_GetUserData.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            USER_GetUserData.SelectCommand.Parameters.Add("@user_id", SqlDbType.NVarChar).Value = user_id;
 
-            USER_GetUserData.Fill(dataset);
+            USER_GetUserData.Fill(dataSet);
 
-            return dataset;
+            return dataSet;
         }
 
         // Get a product's details

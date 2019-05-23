@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -33,13 +34,35 @@ namespace ASPProject.Admin_Pages
             int stock = Convert.ToInt32(stockBox.Text);
             int price = Convert.ToInt32(priceBox.Text);
             string description = descBox.Text;
-            string image = "Test";
-            // Insert Checking for image here
+            string image = "";
 
             // Some preliminary checking
-            if(price <= 0)
+            if (price <= 0)
             {
                 Console.WriteLine("Price cannot be less than or equal to 0$!");
+                return;
+            }
+
+            if(uploadBox.HasFile)
+            {
+                if(!uploadBox.PostedFile.ContentType.Contains("image"))
+                {
+                    Console.WriteLine("File uploaded is not an image, please upload a valid file!");
+                    return;
+                }
+
+                else
+                {
+                    image = Path.GetFileName(uploadBox.PostedFile.FileName);
+                    uploadBox.SaveAs(Server.MapPath("~/Images/" + image));
+
+                    image = "~/Images/" + image;
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("There is no file uploaded. Please upload a valid file!");
                 return;
             }
 

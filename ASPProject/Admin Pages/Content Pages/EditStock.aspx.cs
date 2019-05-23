@@ -25,7 +25,6 @@ namespace ASPProject.Admin_Pages
                 Response.Redirect("~/Base Pages/Login.aspx");
 
             helper = new DataHelper();
-            ResetValue();
         }
 
         // Change the number to be added or reduced from the stock
