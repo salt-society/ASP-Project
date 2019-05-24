@@ -29,6 +29,11 @@ namespace ASPProject.User_Pages
         {
             Session["currentUser"] = null;
             Session["currentUserType"] = null;
+            Session["cartName"] = null;
+            Session["cartQuantity"] = null;
+            Session["cartPrice"] = null;
+            Session["selectedProduct"] = null;
+
             Response.Redirect("~/Base Pages/Login.aspx");
         }
     }

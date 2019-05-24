@@ -60,7 +60,7 @@ namespace ASPProject.User_Pages
             try
             {
                 helper.USER_EditUserDetails(currentUser, password, fname, lname);
-                Response.Redirect("~/User Pages/Content Pages/Profile.aspx");
+                Response.Redirect("~/User Pages/Content Pages/ViewProfile.aspx");
             }
 
             catch

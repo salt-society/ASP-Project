@@ -34,6 +34,11 @@ namespace ASPProject.User_Pages
 
                     nameLabel.Text = userDetails.Tables[0].Rows[0][2].ToString() + " "
                         + userDetails.Tables[0].Rows[0][3].ToString();
+
+                    Session["cartName"] = new List<String>();
+                    Session["cartQuantity"] = new List<int>();
+                    Session["cartPrice"] = new List<int>();
+                    Session["selectedProduct"] = "";
                 }
             }
 

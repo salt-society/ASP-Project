@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User Pages/User.Master" AutoEventWireup="true" CodeBehind="ViewProducts.aspx.cs" Inherits="ASPProject.User_Pages.WebForm7" %>
 <asp:Content ID="ViewProducts" ContentPlaceHolderID="Body" runat="server">
     <div style="width:80%; margin-left: 10%">
-        <asp:GridView ID="ProductGrid" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="product_id" DataSourceID="GMBDatabaseAccess" ForeColor="#333333" GridLines="None" style="width:80%; margin-left:10%">
+        <asp:GridView ID="ProductGrid" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="product_id" DataSourceID="GMBDatabaseAccess" ForeColor="#333333" GridLines="None" style="width:80%; margin-left:10%" OnSelectedIndexChanged="SendToProductPage" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
+            <asp:CommandField ShowSelectButton="True" />
             <asp:BoundField DataField="product_name" HeaderText="Product Name" ReadOnly="True" SortExpression="product_name" />
             <asp:BoundField DataField="stock" HeaderText="Stock" SortExpression="stock" />
             <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" />

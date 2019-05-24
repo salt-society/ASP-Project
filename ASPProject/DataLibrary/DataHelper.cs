@@ -133,5 +133,19 @@ namespace DataLibrary
             PRODUCT_CreateNewProduct.ExecuteNonQuery();
             myConn.Close();
         }
+
+        public void TRANSACTION_CreateNewTransaction(int product_id, string buyer, int quantity, int price, string date_purchased)
+        {
+            myConn.Open();
+            SqlCommand TRANSACTION_CreateNewTransaction = new SqlCommand("TRANSACTION_CreateNewTransaction", myConn);
+            TRANSACTION_CreateNewTransaction.CommandType = CommandType.StoredProcedure;
+            TRANSACTION_CreateNewTransaction.Parameters.Add("@product_id", SqlDbType.Int).Value = product_id;
+            TRANSACTION_CreateNewTransaction.Parameters.Add("@buyer", SqlDbType.NVarChar).Value = buyer;
+            TRANSACTION_CreateNewTransaction.Parameters.Add("@quantity", SqlDbType.Int).Value = quantity;
+            TRANSACTION_CreateNewTransaction.Parameters.Add("@price", SqlDbType.Int).Value = price;
+            TRANSACTION_CreateNewTransaction.Parameters.Add("@date_purchased", SqlDbType.NVarChar).Value = date_purchased;
+            TRANSACTION_CreateNewTransaction.ExecuteNonQuery();
+            myConn.Close();
+        }
     }
 }

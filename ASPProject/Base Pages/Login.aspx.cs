@@ -54,7 +54,7 @@ namespace ASPProject
             {
                 Session["currentUser"] = username;
                 Session["currentUserType"] = "user";
-                Response.Redirect("~/User Pages/Content Pages/ViewProducts.aspx");
+                Response.Redirect("~/User Pages/Content Pages/ViewProfile.aspx");
             }
 
             else

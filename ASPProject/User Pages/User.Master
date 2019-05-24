@@ -7,7 +7,7 @@
     <title>User</title>
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="Src/style.css" />
+    <link rel="stylesheet" href="~/Src/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
     <!-- JS -->
@@ -17,9 +17,13 @@
 </head>
 <body>
     <form id="Main" runat="server">
-        <div style="height: 10%; font-family:Verdana; color:deepskyblue; font-size: 20px">
+        <div class="container">
             <asp:ContentPlaceHolder ID="Header" runat="server">
-                [USER] 
+                <div class="row">
+                    <div class="col-12">
+                        
+                    </div>
+                </div>[USER] 
                 <span style="color: white; font-size: 16px">
                     <asp:HyperLink runat="server" ID="ViewProfile" NavigateUrl="~/User Pages/Content Pages/ViewProfile.aspx" ForeColor="White">Profile</asp:HyperLink>&nbsp| 
                     <asp:HyperLink runat="server" ID="ViewProducts" NavigateUrl="~/User Pages/Content Pages/ViewProducts.aspx" ForeColor="White">View Products</asp:HyperLink>&nbsp|
